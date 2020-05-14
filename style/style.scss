@@ -1,0 +1,124 @@
+$bg_color: #121212;
+$highlight: greenyellow;
+$font_color: white;
+$font_family: "Nexa Black";
+
+@font-face {
+  font-family: "Nexa Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://s3.amazonaws.com/giphy-web-fonts/nexa_black-webfont.woff2")
+      format("woff2"),
+    url("https://s3.amazonaws.com/giphy-web-fonts/nexa_black-webfont.woff")
+      format("woff");
+}
+
+body {
+  background-color: $bg_color;
+}
+
+body ::selection {
+  color: black;
+  background-color: $highlight;
+}
+
+nav {
+  font-family: $font_family;
+  background-color: $bg_color;
+  margin-top: 20px;
+}
+
+label {
+  font-family: $font_family;
+  color: white;
+}
+
+table {
+  margin-top: 20px;
+  background-color: $bg_color;
+}
+
+.gif {
+  text-align: center;
+}
+
+.giphy {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  object-fit: cover;
+  grid-gap: 30px;
+}
+.error {
+  color: $font_color;
+  text-decoration: underline $highlight;
+  margin-bottom: 40px;
+}
+
+#title {
+  font-family: $font_family;
+  color: $font_color;
+  margin-top: 20px;
+}
+
+#name {
+  font-family: $font_family;
+  color: $font_color;
+}
+
+.card {
+  padding: 10px;
+  margin: 20px;
+}
+
+@media (max-width: 599px) {
+  .gif {
+    width: fit-content;
+  }
+  video {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .gif {
+    width: fit-content;
+  }
+  video {
+    width: 100%;
+  }
+}
+
+%cardFont {
+  font-family: $font_family;
+  font-weight: bold;
+}
+
+.indexCard {
+  width: fit-content;
+  background-color: whitesmoke;
+}
+
+.header {
+  @extend %cardFont;
+  color: white;
+  font-size: 40px;
+  text-decoration: underline $highlight;
+  margin-top: 10px;
+}
+
+.indextitle {
+  @extend %cardFont;
+  padding: 10px 12px;
+  font-size: 30px;
+  color: $font_color;
+  background-color: $bg_color;
+}
+
+.index {
+  video {
+    width: 100%;
+  }
+  .card {
+    @extend %cardFont;
+  }
+}

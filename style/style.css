@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Nexa Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://s3.amazonaws.com/giphy-web-fonts/nexa_black-webfont.woff2") format("woff2"), url("https://s3.amazonaws.com/giphy-web-fonts/nexa_black-webfont.woff") format("woff");
+}
+body {
+  background-color: #121212;
+}
+
+body ::selection {
+  color: black;
+  background-color: greenyellow;
+}
+
+nav {
+  font-family: "Nexa Black";
+  background-color: #121212;
+  margin-top: 20px;
+}
+
+label {
+  font-family: "Nexa Black";
+  color: white;
+}
+
+table {
+  margin-top: 20px;
+  background-color: #121212;
+}
+
+.gif {
+  text-align: center;
+}
+
+.giphy {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  object-fit: cover;
+  grid-gap: 30px;
+}
+
+.error {
+  color: white;
+  text-decoration: underline greenyellow;
+  margin-bottom: 40px;
+}
+
+#title {
+  font-family: "Nexa Black";
+  color: white;
+  margin-top: 20px;
+}
+
+#name {
+  font-family: "Nexa Black";
+  color: white;
+}
+
+.card {
+  padding: 10px;
+  margin: 20px;
+}
+
+@media (max-width: 599px) {
+  .gif {
+    width: fit-content;
+  }
+
+  video {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .gif {
+    width: fit-content;
+  }
+
+  video {
+    width: 100%;
+  }
+}
+.index .card, .indextitle, .header {
+  font-family: "Nexa Black";
+  font-weight: bold;
+}
+
+.indexCard {
+  width: fit-content;
+  background-color: whitesmoke;
+}
+
+.header {
+  color: white;
+  font-size: 40px;
+  text-decoration: underline greenyellow;
+  margin-top: 10px;
+}
+
+.indextitle {
+  padding: 10px 12px;
+  font-size: 30px;
+  color: white;
+  background-color: #121212;
+}
+
+.index video {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
